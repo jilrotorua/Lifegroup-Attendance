@@ -1,0 +1,12 @@
+name = "jil-lifegroup-attendance-api"
+main = "worker.js"
+compatibility_date = "2026-09-20"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "jil-lifegroup-attendance"
+database_id = "PASTE-YOUR-D1-DATABASE-ID"
+
+[vars]
+ALLOWED_ORIGINS = "https://YOUR-GITHUB-USERNAME.github.io"
+# Add ADMIN_PIN as an encrypted secret, not in this file.
