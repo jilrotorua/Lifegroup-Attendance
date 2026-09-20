@@ -4,7 +4,7 @@ An offline-friendly Lifegroup member, birthday and attendance app. Leaders can r
 
 Leaders can manage multiple Lifegroups, keep separate members and attendance for each group, and use **All Members** to view everyone’s birthday together with their Lifegroup card. Birthday entry uses simple Day, Month and Year dropdowns.
 
-Each gathering can include up to five photos. Photos are resized before saving and appear in the Church Admin dashboard after submission. Sent gatherings remain in the leader's Attendance History.
+Each gathering can include up to two photos. Photos are resized before saving and remain with the submitted report as gathering memories. Sent gatherings remain in the leader's Attendance History.
 
 ## What is included
 
