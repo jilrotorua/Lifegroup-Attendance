@@ -4,6 +4,9 @@ Upload every file in this update ZIP to the ROOT of your existing GitHub reposit
 When GitHub asks, confirm that the existing files should be replaced/overwritten.
 
 This update adds:
+- Combined attendance asks which Lifegroups are joining and lists their names in the saved report
+- Gathering Memories now labels this field “Lifegroup” instead of “Lifegroup Leader”
+- Home includes an editable upcoming Lifegroup schedule above birthdays, with date, time, venue and notes
 - Multiple Lifegroups per leader
 - Separate members and attendance for each Lifegroup
 - All Members view with Lifegroup cards and birthdays
@@ -30,10 +33,48 @@ This update adds:
 - At 14 visits, an eligibility note and manual Convert to Member button appear
 - Conversion only happens when the leader taps Convert and confirms
 - Complete offline World English Bible (WEB) with book and chapter navigation
-- A different deterministic verse for each day
+- 365 different encouraging daily verses for a full-year rotation
 - Verse highlighting, personal notes and bookmarks
 - Offline Bible Journal with one-tap verse insertion
 - Bible notes, bookmarks, highlights and journals are included in backups
+- Corrected all WEB source abbreviations so every Bible book displays its full name
+- Daily verse rotates only through positive and encouraging Scriptures
+- Journal has an Open Bible button for choosing one or several verses
+- Bible chapters allow multi-selecting verses
+- Selected verses can be bookmarked together or inserted into one journal entry
+- Lifegroup selector added to the top bar for faster switching
+- View All Lifegroups dashboard with combined totals and group cards
+- Six colour themes that can be saved separately for each Lifegroup
+- View All Lifegroups uses a separate neutral colour theme
+- Bible and Journal are personal and no longer display a Lifegroup selector
+- Larger journal editor with preserved line breaks and spacing
+- Saved journals now use View, with Edit and Delete inside the entry
+- Selected Bible verses show a bright floating Bookmark and Journal action bar
+- Individual or multiple selected verses can be shared as a Messenger-ready JPEG
+- Today’s Verse also has a Share JPEG button
+- Members and visitors now use one unified database across all Lifegroups
+- Member and visitor cards show their assigned Lifegroup and can be filtered
+- The top Lifegroup selector has been removed
+- Attendance now chooses a Lifegroup or Combined Lifegroups
+- Home includes a private daily declaration note
+- The header shows “Lifegroup Attendance of [Leader Name]” with a pencil for editing
+- A saved daily declaration becomes a clean permanent note for the day, with a pencil for revisions
+- Add Visitor now opens in front of the attendance form and returns to attendance after saving
+- The shared/exhortation checkbox is hidden for new journal entries and appears only when editing a saved entry
+- Every bookmarked Bible verse now shows its full book, chapter and verse reference
+- The tiny seven-item bottom bar is replaced by large Home, Attendance and Menu buttons, with a high-contrast accessible menu
+- A custom navy-and-gold “LG Attendance” icon is included for Android and iPhone/iPad home screens
+- Settings now includes Delete Lifegroup with confirmation, last-group protection, and safe reassignment of existing records
+- Report View now opens a full Gathering Memories page with attendance details, notes and photos; photos remain stored after submission
+- Gathering photo uploads are limited to two compressed photos to reduce device storage use
+- Verse Today is shown on Home above the declaration, and the bottom middle button opens a personal Prayer Requests page with answered-prayer tracking and notes
+- The Home greeting now says “Keep all your members connected, counted and celebrated”
+- Existing Lifegroup-specific people and reports migrate automatically
+- Journals can record whether they were shared, when, and with whom
+- Complete journal entries can be copied with formatting and spacing preserved
+- Per-verse action buttons removed for a cleaner Bible view
+- Floating verse panel now includes bookmark, journal, JPEG, wide notes and highlight colours
+- Verse action panel stays hidden until at least one verse is selected
 
 After uploading, wait 1–3 minutes and refresh the app. If the old version remains,
 close the app tab and reopen the GitHub Pages link.

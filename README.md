@@ -6,6 +6,8 @@ Leaders can manage multiple Lifegroups, keep separate members and attendance for
 
 Each gathering can include up to two photos. Photos are resized before saving and remain with the submitted report as gathering memories. Sent gatherings remain in the leader's Attendance History.
 
+The Home page includes Verse Today above the daily declaration. A personal Prayer Requests page lets leaders add requests, keep notes, and mark answered prayers.
+
 ## What is included
 
 - `docs/index.html` — leader-facing app
