@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS lifegroup_reports (
   present_json TEXT NOT NULL DEFAULT '[]',
   first_time_visitors INTEGER NOT NULL DEFAULT 0,
   returning_visitors INTEGER NOT NULL DEFAULT 0,
+  photos_json TEXT NOT NULL DEFAULT '[]',
   notes TEXT NOT NULL DEFAULT '',
   submitted_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
