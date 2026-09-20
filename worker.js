@@ -17,17 +17,17 @@ export default {
     if(url.pathname!=="/reports")return new Response(JSON.stringify({error:"Not found"}),{status:404,headers});
     if(request.method==="POST"){
       try{
-        const p=await request.json(),id=clean(p.id,80),lifegroup=clean(p.lifegroup,120),leader=clean(p.leader,120),date=clean(p.date,10),type=clean(p.type,80),present=Array.isArray(p.present)?p.present.map(x=>clean(x,120)).filter(Boolean).slice(0,300):[],photos=Array.isArray(p.photos)?p.photos.filter(x=>typeof x==="string"&&x.startsWith("data:image/jpeg;base64,")).slice(0,5):[];
+        const p=await request.json(),id=clean(p.id,80),lifegroup=clean(p.lifegroup,120),leader=clean(p.leader,120),date=clean(p.date,10),type=clean(p.type,80),venue=clean(p.venue,200),discussion=clean(p.discussion,300),exhorter=clean(p.exhorter,120),present=Array.isArray(p.present)?p.present.map(x=>clean(x,120)).filter(Boolean).slice(0,300):[],firstNames=Array.isArray(p.firstVisitorNames)?p.firstVisitorNames.map(x=>clean(x,120)).filter(Boolean).slice(0,100):[],returningNames=Array.isArray(p.returningVisitorNames)?p.returningVisitorNames.map(x=>clean(x,120)).filter(Boolean).slice(0,100):[],photos=Array.isArray(p.photos)?p.photos.filter(x=>typeof x==="string"&&x.startsWith("data:image/jpeg;base64,")).slice(0,5):[];
         if(!id||!lifegroup||!leader||!/^\d{4}-\d{2}-\d{2}$/.test(date))return new Response(JSON.stringify({error:"Missing required details"}),{status:400,headers});
         if(JSON.stringify(photos).length>900000)return new Response(JSON.stringify({error:"Photos are too large"}),{status:413,headers});
-        await env.DB.prepare("INSERT OR IGNORE INTO lifegroup_reports (id,lifegroup,leader,meeting_date,meeting_type,present_json,first_time_visitors,returning_visitors,photos_json,notes) VALUES (?,?,?,?,?,?,?,?,?,?)").bind(id,lifegroup,leader,date,type||"Weekly Lifegroup",JSON.stringify(present),Math.max(0,Number(p.first)||0),Math.max(0,Number(p.returning)||0),JSON.stringify(photos),clean(p.notes,2000)).run();
+        await env.DB.prepare("INSERT OR IGNORE INTO lifegroup_reports (id,lifegroup,leader,meeting_date,meeting_type,venue,discussion,exhorter,present_json,first_visitor_names_json,returning_visitor_names_json,first_time_visitors,returning_visitors,photos_json,notes) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)").bind(id,lifegroup,leader,date,type||"Lifegroup Gathering",venue,discussion,exhorter,JSON.stringify(present),JSON.stringify(firstNames),JSON.stringify(returningNames),Math.max(0,Number(p.first)||0),Math.max(0,Number(p.returning)||0),JSON.stringify(photos),clean(p.notes,2000)).run();
         return new Response(JSON.stringify({ok:true}),{status:201,headers});
       }catch(e){return new Response(JSON.stringify({error:"Unable to save report"}),{status:500,headers});}
     }
     if(request.method==="GET"){
       if(!env.ADMIN_PIN||request.headers.get("x-admin-pin")!==env.ADMIN_PIN)return new Response(JSON.stringify({error:"Unauthorized"}),{status:401,headers});
       const result=await env.DB.prepare("SELECT * FROM lifegroup_reports ORDER BY meeting_date DESC, submitted_at DESC LIMIT 1000").all();
-      const reports=(result.results||[]).map(r=>({id:r.id,lifegroup:r.lifegroup,leader:r.leader,date:r.meeting_date,type:r.meeting_type,present:JSON.parse(r.present_json||"[]"),first:r.first_time_visitors,returning:r.returning_visitors,photos:JSON.parse(r.photos_json||"[]"),notes:r.notes,submittedAt:r.submitted_at}));
+      const reports=(result.results||[]).map(r=>({id:r.id,lifegroup:r.lifegroup,leader:r.leader,date:r.meeting_date,type:r.meeting_type,venue:r.venue||"",discussion:r.discussion||"",exhorter:r.exhorter||"",present:JSON.parse(r.present_json||"[]"),firstVisitorNames:JSON.parse(r.first_visitor_names_json||"[]"),returningVisitorNames:JSON.parse(r.returning_visitor_names_json||"[]"),first:r.first_time_visitors,returning:r.returning_visitors,photos:JSON.parse(r.photos_json||"[]"),notes:r.notes,submittedAt:r.submitted_at}));
       return new Response(JSON.stringify({reports}),{headers});
     }
     return new Response(JSON.stringify({error:"Method not allowed"}),{status:405,headers});

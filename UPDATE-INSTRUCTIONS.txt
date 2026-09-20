@@ -16,6 +16,24 @@ This update adds:
 - Named visitors can be selected when recording attendance
 - First-time visitors automatically become returning after their first recorded visit
 - Visitor birthdays appear on the Home screen with a Visitor label
+- Add named visitors directly while recording attendance
+- Unnamed visitor number fields have been removed
+- First-time and returning totals are calculated automatically
+- Selected gathering photos display as thumbnails before saving
+- A brighter, colour-coded attendance form that is easier to read
+- Meeting type removed because every report is a Lifegroup gathering
+- Gathering Date, Venue, Discussion and Exhorter fields added
+- New gathering details and visitor names appear in the Church Admin report
+- Duplicate attendance for the same gathering date is prevented
+- Settings now shows each Lifegroup only once with simple Edit and Add buttons
+- Visitor cards show the number of gatherings attended
+- At 14 visits, an eligibility note and manual Convert to Member button appear
+- Conversion only happens when the leader taps Convert and confirms
+- Complete offline World English Bible (WEB) with book and chapter navigation
+- A different deterministic verse for each day
+- Verse highlighting, personal notes and bookmarks
+- Offline Bible Journal with one-tap verse insertion
+- Bible notes, bookmarks, highlights and journals are included in backups
 
 After uploading, wait 1–3 minutes and refresh the app. If the old version remains,
 close the app tab and reopen the GitHub Pages link.
