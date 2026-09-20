@@ -4,6 +4,7 @@ Upload every file in this update ZIP to the ROOT of your existing GitHub reposit
 When GitHub asks, confirm that the existing files should be replaced/overwritten.
 
 This update adds:
+- The whole Offline Bible is now the centre bottom tab, while Prayer Requests has moved into the Menu
 - Verse Today now changes at the phone’s local midnight instead of following UTC time
 - Smaller, calmer action buttons under Verse Today
 - Prayer Requests removed from the Menu because it already has a main bottom tab
