@@ -4,7 +4,7 @@ An offline-friendly Lifegroup member, birthday and attendance app. Leaders can r
 
 Leaders can manage multiple Lifegroups, keep separate members and attendance for each group, and use **All Members** to view everyone’s birthday together with their Lifegroup card. Birthday entry uses simple Day, Month and Year dropdowns.
 
-Each gathering can include up to two photos. Photos are resized before saving and remain with the submitted report as gathering memories. Sent gatherings remain in the leader's Attendance History.
+Gatherings are stored as lightweight text records without photos to keep long-term device storage use low. Sent gatherings remain in the leader's Attendance History.
 
 The Home page includes Verse Today above the daily declaration. A personal Prayer Requests page lets leaders add requests, keep notes, and mark answered prayers.
 

@@ -4,6 +4,14 @@ Upload every file in this update ZIP to the ROOT of your existing GitHub reposit
 When GitHub asks, confirm that the existing files should be replaced/overwritten.
 
 This update adds:
+- Verse Today now changes at the phone’s local midnight instead of following UTC time
+- Smaller, calmer action buttons under Verse Today
+- Prayer Requests removed from the Menu because it already has a main bottom tab
+- Prayer Request and saved Journal Entry totals are now displayed
+- Softer colourful cards and improved visual grouping throughout the app
+- Offline whole-Bible keyword search with selectable results (up to 200 shown)
+- Lifegroup schedules now use clear Hour, Minute and AM/PM selectors instead of military time
+- Gathering photo upload and display have been removed to keep long-term browser storage use low
 - Combined attendance asks which Lifegroups are joining and lists their names in the saved report
 - Gathering Memories now labels this field “Lifegroup” instead of “Lifegroup Leader”
 - Home includes an editable upcoming Lifegroup schedule above birthdays, with date, time, venue and notes
@@ -11,9 +19,8 @@ This update adds:
 - Separate members and attendance for each Lifegroup
 - All Members view with Lifegroup cards and birthdays
 - Easier Day / Month / Year birthday entry
-- Up to five resized gathering photos
+- Lightweight text-only gathering records
 - Sent gatherings remain in Attendance History
-- Photos appear in the Church Admin dashboard
 - A separate Visitors database for every Lifegroup
 - First-time and returning visitor records with gender, birthday, mobile and inviter
 - Named visitors can be selected when recording attendance
@@ -22,7 +29,6 @@ This update adds:
 - Add named visitors directly while recording attendance
 - Unnamed visitor number fields have been removed
 - First-time and returning totals are calculated automatically
-- Selected gathering photos display as thumbnails before saving
 - A brighter, colour-coded attendance form that is easier to read
 - Meeting type removed because every report is a Lifegroup gathering
 - Gathering Date, Venue, Discussion and Exhorter fields added
@@ -65,8 +71,7 @@ This update adds:
 - The tiny seven-item bottom bar is replaced by large Home, Attendance and Menu buttons, with a high-contrast accessible menu
 - A custom navy-and-gold “LG Attendance” icon is included for Android and iPhone/iPad home screens
 - Settings now includes Delete Lifegroup with confirmation, last-group protection, and safe reassignment of existing records
-- Report View now opens a full Gathering Memories page with attendance details, notes and photos; photos remain stored after submission
-- Gathering photo uploads are limited to two compressed photos to reduce device storage use
+- Report View opens a complete Attendance Record with gathering details, attendance and notes
 - Verse Today is shown on Home above the declaration, and the bottom middle button opens a personal Prayer Requests page with answered-prayer tracking and notes
 - The Home greeting now says “Keep all your members connected, counted and celebrated”
 - Existing Lifegroup-specific people and reports migrate automatically
